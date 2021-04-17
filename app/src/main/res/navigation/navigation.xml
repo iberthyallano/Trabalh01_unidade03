@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/acelerometroFragment"
+        android:name="pt.apt.trabalho01unidade03.UI.Acelerometro.AcelerometroFragment"
+        android:label="Acelerometro"
+        tools:layout="@layout/fragment_acelerometro">
+        <action
+            android:id="@+id/action_acelerometroFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="pt.apt.trabalho01unidade03.UI.Home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_acelerometroFragment"
+            app:destination="@id/acelerometroFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_luzFragment"
+            app:destination="@id/luzFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_proximidadeFragment"
+            app:destination="@id/proximidadeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_giroscopioFragment"
+            app:destination="@id/giroscopioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/luzFragment"
+        android:name="pt.apt.trabalho01unidade03.UI.Luz.LuzFragment"
+        android:label="Luz"
+        tools:layout="@layout/fragment_luz">
+        <action
+            android:id="@+id/action_luzFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/proximidadeFragment"
+        android:name="pt.apt.trabalho01unidade03.UI.Proximidade.ProximidadeFragment"
+        android:label="Proximidade"
+        tools:layout="@layout/fragment_proximidade">
+        <action
+            android:id="@+id/action_proximidadeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/giroscopioFragment"
+        android:name="pt.apt.trabalho01unidade03.UI.Giroscopio.GiroscopioFragment"
+        android:label="Giroscopio"
+        tools:layout="@layout/fragment_giroscopio">
+        <action
+            android:id="@+id/action_giroscopioFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
